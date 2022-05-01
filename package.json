@@ -1,0 +1,29 @@
+{
+  "name": "date-form",
+  "version": "0.1.1",
+  "description": "Customizable date formatter with builtin presets.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "ava",
+    "build-publish": "rm -r dist && npm run build && npm run test && cp package.json dist && cp README.md dist && cp LICENSE dist"
+  },
+  "author": "jwr12135",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwr12135/date-form.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "format"
+  ],
+  "bugs": {
+    "url": "https://github.com/jwr12135/date-form/issues"
+  },
+  "homepage": "https://github.com/jwr12135/date-form#readme",
+  "devDependencies": {
+    "ava": "^4.2.0"
+  }
+}
