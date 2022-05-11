@@ -1,12 +1,20 @@
 {
   "name": "date-form",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Customizable date formatter with builtin presets.",
   "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
-    "test": "ava",
-    "build-publish": "rm -r dist && npm run build && npm run test && cp package.json dist && cp README.md dist && cp LICENSE dist"
+    "build": "node build.mjs",
+    "test": "xo && ava"
   },
   "author": "jwr12135",
   "license": "MIT",
@@ -24,6 +32,28 @@
   },
   "homepage": "https://github.com/jwr12135/date-form#readme",
   "devDependencies": {
-    "ava": "^4.2.0"
+    "ava": "^4.2.0",
+    "typescript": "^4.6.4",
+    "xo": "^0.48.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": false
+  },
+  "xo": {
+    "prettier": true,
+    "space": 2,
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "@typescript-eslint/no-extraneous-class": "off",
+      "max-depth": "off",
+      "unicorn/no-static-only-class": "off",
+      "unicorn/numeric-separators-style": "off",
+      "unicorn/prefer-node-protocol": "off",
+      "unicorn/prevent-abbreviations": "off"
+    }
   }
 }

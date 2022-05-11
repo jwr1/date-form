@@ -137,10 +137,6 @@ The example shown above is used as the default values, you only need to specify 
 
 ## `StrfDate` Reference
 
-### Codes
-
-A flag lets you modify the output of a code used in your format. Here are the default flags used for both `StrfDate` and `ExpressDate`:
-
 | Code    | Description                                                         |
 | ------- | ------------------------------------------------------------------- |
 | `%%`    | a literal %                                                         |

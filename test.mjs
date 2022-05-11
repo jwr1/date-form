@@ -1,5 +1,5 @@
-const { default: test } = require('ava');
-const { StrfDate, ExpressDate } = require('./dist');
+import test from 'ava';
+import {StrfDate, ExpressDate} from './dist/index.mjs';
 
 const d = new Date(977768145000);
 
